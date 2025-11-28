@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loli Shop</title>
+  <style>
+    /* Animation for logo */
+    @keyframes logoFade {
+      0% {opacity: 0; transform: translateY(-15px);} 
+      100% {opacity: 1; transform: translateY(0);} 
+    }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #fdeef4;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      padding: 30px 0;
+      position: sticky;
+      top: 0;
+      background: #fdeef4cc;
+      backdrop-filter: blur(6px);
+      z-index: 10;
+    }
+    header img {
+      width: 180px;
+      animation: logoFade 1s ease;
+      margin-bottom: 10px;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      padding: 40px;
+    }
+    .product {
+      background: white;
+      border-radius: 18px;
+      padding: 20px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform .3s ease, box-shadow .3s ease;
+      cursor: pointer;
+    }
+    .product:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+    }
+    .product img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: scale(0.95);} 
+      to {opacity: 1; transform: scale(1);} 
+    }
+    .product {
+      animation: fadeIn .6s ease;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="loli-logo.png" alt="Loli Shop Logo" />
+    <h1>Welcome to Loli Shop</h1>
+  </header>
+
+  <section class="products">
+    <div class="product">
+      <img src="product1.jpg" alt="Product 1" />
+      <h3>Product Name</h3>
+      <p>$20.00</p>
+    </div>
+    <div class="product">
+      <img src="product2.jpg" alt="Product 2" />
+      <h3>Product Name</h3>
+      <p>$25.00</p>
+    </div>
+    <div class="product">
+      <img src="product3.jpg" alt="Product 3" />
+      <h3>Product Name</h3>
+      <p>$18.00</p>
+    </div>
+  </section>
+</body>
+</html>
